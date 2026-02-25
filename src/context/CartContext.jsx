@@ -19,8 +19,20 @@ export const CartProvider = ({ children }) => {
       }
     });
   }
+
+  function removeFromCart(productId) {
+    setCartItems((prev) => prev.filter((item) => item.id !== productId));
+  }
+
+  function updateQuantity(productId, newQuantity) {
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item,
+      ),
+    );
+  }
   return (
-    <CartContext.Provider value={{ cartItems,addToCart }}>
+    <CartContext.Provider value={{ cartItems,addToCart,removeFromCart,updateQuantity }}>
       {children}
     </CartContext.Provider>
   );

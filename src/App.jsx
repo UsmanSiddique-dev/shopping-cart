@@ -2,8 +2,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import CartPage from "./pages/CartPage";
-
+import { CartProvider, useCart } from "./context/CartContext";
 function Navbar() {
+  const { cartItems } = useCart();
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -15,7 +16,7 @@ function Navbar() {
             Home
           </Link>
           <Link className="nav-link d-inline text-white" to="/cart">
-            Cart (2)
+            Cart ({cartItems.length})
           </Link>
         </div>
       </div>
@@ -25,13 +26,15 @@ function Navbar() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
