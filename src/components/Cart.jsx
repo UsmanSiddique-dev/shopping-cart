@@ -1,7 +1,7 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 export default function Cart() {
-  const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, total } = useCart();
   return (
     <div className="container">
       <h2 className="mb-3">Your Cart</h2>
@@ -48,7 +48,9 @@ export default function Cart() {
               ))}
             </tbody>
           </table>
-          <div className="text-end fw-bold fs-5">Total: $600.00</div>
+          <div className="text-end fw-bold fs-5">
+            Total :${total.toFixed(2)}
+          </div>
         </>
       )}
     </div>
