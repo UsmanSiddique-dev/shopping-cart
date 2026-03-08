@@ -1,18 +1,63 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern shopping cart application built with React.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a single-page application that allows users to browse a list of products, add them to a shopping cart, and view the items in their cart. It serves as a practical example of building a React application with state management and routing.
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+*   **Product Listing:** View a list of available products.
+*   **Add to Cart:** Add products to the shopping cart.
+*   **Remove from Cart:** Remove products from the shopping cart.
+*   **Cart View:** A dedicated page to view and manage cart items.
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+*   **[React](https://react.dev/):** A JavaScript library for building user interfaces.
+*   **[Vite](https://vitejs.dev/):** A fast build tool and development server for modern web projects.
+*   **[React Router](https://reactrouter.com/):** For routing and navigation within the application.
+*   **[Bootstrap](https://getbootstrap.com/):** For styling and responsive design.
+*   **[ESLint](https://eslint.org/):** For code linting and maintaining code quality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+*   [Node.js](https://nodejs.org/) (version 18.x or higher recommended)
+*   [npm](https://www.npmjs.com/)
+
+### Installation
+
+1.  Clone the repo:
+    ```sh
+    git clone https://github.com/your-username/shopping-cart.git
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd shopping-cart
+    ```
+3.  Install NPM packages:
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To run the application in development mode, use the following command. This will open the app in your browser at `http://localhost:5173`.
+
+```sh
+npm run dev
+```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+*   `npm run dev`: Runs the app in the development mode.
+*   `npm run build`: Builds the app for production to the `dist` folder.
+*   `npm run lint`: Lints the code using ESLint.
+*   `npm run preview`: Serves the production build locally.
