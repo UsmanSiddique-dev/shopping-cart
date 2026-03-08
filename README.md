@@ -34,7 +34,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo:
     ```sh
-    git clone https://github.com/your-username/shopping-cart.git
+    git clone https://github.com/UsmanSiddique-dev/shopping-cart.git
     ```
 2.  Navigate to the project directory:
     ```sh
